@@ -1,0 +1,27 @@
+:root {
+	//here the margin top for the body
+	--header-height 			: 1rem;
+	--font-size-title			: .6em;
+	--font-size-content			: 1em;
+	--font-size-sub-content		: 1em;
+	--font-size-date			: .6em;
+
+	@include from(l) {
+		--header-height 		: 2rem;
+		--font-size-content		: 1.4em;
+		--font-size-sub-content	: .8em;
+	}
+
+
+	//native color vars
+	--color-border-card			: 1px solid #323435;
+	--color-border-card-hover	: 1px solid #FFFFFF;
+	--color-text-default		: #FFFFFF;
+	--color-text-title			: #FFFFFF;
+	--color-text-content		: #FFFFFF;
+	--color-text-sub-content	: #A4A6A8;
+	--color-text-date			: #FFFFFF;
+	--color-body-bg 			: #262728;
+}
+
+

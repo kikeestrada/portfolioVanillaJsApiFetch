@@ -1,20 +1,25 @@
-// Libraries
-@import "libraries/libraries";
+//Libraries
+
+//Normalize to fix standar default layout
+@import "~normalize.css";
+
+// This is EdGrid  CSS Library (Layout, FlexBox and CSSGrid)
+$fractions 			: 1,2,3,4,5,6,7,8,9,10;
+$breakpoints 		:
+	(
+		s	: 0,
+		m	: 640px,
+		l	: 960px,
+		lg	: 1280px,
+		xl	: 1600px
+	);
+@import "~ed-grid/ed-grid";
 
 // Config
-@import "config/config";
+@import "config/vars";
 
 // LAYOUT
-// Escribe solo los estilos de layout (division en regiones del viewport)
 @import "layout/layout";
 
 // MODULOS (SMACSS) O COMPONENTES (ITCSS)
-@import "components/components";
-
-// Theme (colors and fonts)
-@import "theme/theme";
-
-// Utilities (hacks)
-// Todos los hacks que hayas necesitado para solucionar conflictos
-// o resolver situaciones extremas. Se espera poder mejorarlos luego.
-@import "hacks/hacks";
+@import "components/card";

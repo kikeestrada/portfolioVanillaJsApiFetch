@@ -1,29 +1,14 @@
 extends ../config/template
 append config
 	-currentPage		= "home"
-	-siteName			= 'Layouts'
-	-content			= 'content'
-	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+	-siteName			= 'Dashboard'
+	-content			= 'Article-Dashboard'
+	-pageDescription	= 'Dynamic Grid System'
 block main-header
-	+banner(
-		"https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-		'Home',
-		'Description',
-		true,
-		''
-	)
-block main-container
-	include ../components/components
-	include ../components/markdown
-	include ../components/tabs
-	include ../components/modal
 
+block main-container
+	div(class='ed-grid rows-gap gap-4 s-grid-1 m-grid-2 l-grid-3', id='myContent')
 block main-footer
 block scripts
-	script.
-		document.getElementById('modal-button').addEventListener('click', () => {
-			edModal(`<h2>Bienvenidos a EDui</h2>`)
-		})
-
 
 

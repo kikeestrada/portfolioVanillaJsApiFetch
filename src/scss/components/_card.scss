@@ -1,0 +1,45 @@
+.card{
+	position 			: relative;
+	border 				: var(--color-border-card);
+	padding 			: 40px;
+	border-radius 		: 5px;
+	&__close{
+		position 		: absolute;
+		padding 		: .3em .6em;
+		background 		: #262728;
+		border-radius 	: 50%;
+		border 			: 1px solid white;
+		color 			: white;
+		top 			: -15px;
+		right 			: -16px;
+		cursor 			: pointer;
+	}
+	%bold-text {
+		font-weight 	: bold;
+	}
+	&__title{
+		@extend %bold-text;
+		font-size 		: var(--font-size-title);
+		color 			: var(--color-text-title);
+	}
+	&__content{
+		@extend %bold-text;
+		font-size 		: var(--font-size-content);
+		color 			: var(--color-text-content);
+	}
+	&__sub-content{
+		font-size 		: var(--font-size-sub-content);
+		color 			: var(--color-text-sub-content);
+	}
+	&__date{
+		font-size 		: var(--font-size-date);
+		color 			: var(--color-text-date);
+	}
+	&:hover {
+		border			: var(--color-border-card-hover);
+	}
+	&:hover &__close{
+		background: white;
+		color: #262728;
+	}
+}
