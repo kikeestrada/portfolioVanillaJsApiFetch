@@ -32,7 +32,7 @@ var fnLoadApi = exports.fnLoadApi = function fnLoadApi() {
 	// const to validate the request state
 	var STATUS_OK = 200;
 	var STATUS_NOT_FOUND = 404;
-	var url = 'https://jsonplaceholder.typicode.com/posts/';
+	var url = 'https://jsonplaceholder.typicode.com/users/';
 
 	// this function gets the api connection
 	var getConnection = function getConnection() {
@@ -56,7 +56,7 @@ var fnLoadApi = exports.fnLoadApi = function fnLoadApi() {
 	var draw = function draw(data) {
 		var container = document.getElementById('myContent');
 		data.forEach(function (jsonpApi) {
-			var articleHTML = '\n\t\t\t\t<article class="card" id="' + jsonpApi.id + '">\n\t\t\t\t\t<div class="card__close"><span>X</span></div>\n\t\t\t\t\t<div class="card__title">\n\t\t\t\t\t\t<h1>News</h1>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__content">\n\t\t\t\t\t\t<p>' + jsonpApi.title + '</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__sub-content">\n\t\t\t\t\t\t<p>' + jsonpApi.body + '</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__date"><span>10.14.19</span></div>\n\t\t\t\t</article>\n\t\t\t';
+			var articleHTML = '\n\t\t\t\t<article class="card" id="' + jsonpApi.id + '">\n\t\t\t\t\t<div class="card__close"><span>X</span></div>\n\t\t\t\t\t<div class="card__title">\n\t\t\t\t\t\t<h1>' + jsonpApi.name + '</h1>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__content">\n\t\t\t\t\t\t<p>' + jsonpApi.company.catchPhrase + '</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__sub-content">\n\t\t\t\t\t\t<p>' + jsonpApi.company.bs + '</p> \n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__date"><span>' + jsonpApi.address.zipcode + '</span></div>\n\t\t\t\t</article>\n\t\t\t';
 			container.insertAdjacentHTML('beforeend', articleHTML);
 		});
 	};

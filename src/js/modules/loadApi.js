@@ -2,7 +2,7 @@ export const fnLoadApi = () => {
 	// const to validate the request state
 	const STATUS_OK = 200;
 	const STATUS_NOT_FOUND = 404;
-	const url = `https://jsonplaceholder.typicode.com/posts/`;
+	const url = `https://jsonplaceholder.typicode.com/users/`;
 
 	// this function gets the api connection
 	const getConnection = () =>{
@@ -32,15 +32,15 @@ export const fnLoadApi = () => {
 				<article class="card" id="${jsonpApi.id}">
 					<div class="card__close"><span>X</span></div>
 					<div class="card__title">
-						<h1>News</h1>
+						<h1>${jsonpApi.name}</h1>
 					</div>
 					<div class="card__content">
-						<p>${jsonpApi.title}</p>
+						<p>${jsonpApi.company.catchPhrase}</p>
 					</div>
 					<div class="card__sub-content">
-						<p>${jsonpApi.body}</p>
+						<p>${jsonpApi.company.bs}</p> 
 					</div>
-					<div class="card__date"><span>10.14.19</span></div>
+					<div class="card__date"><span>${jsonpApi.address.zipcode}</span></div>
 				</article>
 			`;
 			container.insertAdjacentHTML('beforeend', articleHTML)
