@@ -57,7 +57,7 @@ var fnCreateResource = exports.fnCreateResource = function fnCreateResource() {
       body: JSON.stringify({
         title: 'foo',
         body: 'bar',
-        userId: 1
+        userId: 2
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8"
@@ -80,7 +80,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var fnDeleteResource = exports.fnDeleteResource = function fnDeleteResource() {
 	var deleteResource = function deleteResource() {
-		fetch('https://jsonplaceholder.typicode.com/posts/1', {
+		fetch('https://jsonplaceholder.typicode.com/posts/101', {
 			method: 'DELETE'
 		}).then(function (response) {
 			return response.json();
@@ -132,7 +132,7 @@ var fnGetAllResources = exports.fnGetAllResources = function fnGetAllResources()
 	var draw = function draw(data) {
 		var container = document.getElementById('myContent');
 		data.forEach(function (jsonpApi) {
-			var articleHTML = '\n\t\t\t\t<article class="card" id="' + jsonpApi.id + '">\n\t\t\t\t\t<div class="card__close">\n\t\t\t\t\t\t<span class="btnDelete">X</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__title">\n\t\t\t\t\t\t<h1>Name: ' + jsonpApi.title + '</h1>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__content">\n\t\t\t\t\t\t<p>' + jsonpApi.body + '</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__sub-content">\n\t\t\t\t\t\t<p>' + jsonpApi.userId + '</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__date"><span>ID: ' + jsonpApi.title + '</span></div>\n\t\t\t\t</article>\n\t\t\t';
+			var articleHTML = '\n\t\t\t\t<article class="card" id="' + jsonpApi.id + '">\n\t\t\t\t\t<div class="card__close">\n\t\t\t\t\t\t<span class="btnDelete">X</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__title">\n\t\t\t\t\t\t<h1>Name: ' + jsonpApi.title + '</h1>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="card__content">\n\t\t\t\t\t\t<p>' + jsonpApi.body + '</p>\n\t\t\t\t\t</div>\n\t\t\t\t</article>\n\t\t\t';
 			container.insertAdjacentHTML('beforeend', articleHTML);
 		});
 	};
