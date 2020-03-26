@@ -7,6 +7,6 @@
 * JS (es6 Babel Transpiler)
 * gh-pages (For Continuous Deployment)
 ## 
-## [For GitHub Pages Click Here](https://kikeestrada.github.io/wondersaucetest/)
+## [For GitHub Pages Click Here](https://kikeestrada.github.io/portfolioVanillaJsApiFetch/)
 
 
