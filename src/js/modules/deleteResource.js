@@ -1,6 +1,6 @@
 export const fnDeleteResource = () => {
 	const deleteResource = () =>{
-		fetch('https://jsonplaceholder.typicode.com/posts/1', {
+		fetch('https://jsonplaceholder.typicode.com/posts/101', {
           method: 'DELETE'
         })
         .then(response => response.json())

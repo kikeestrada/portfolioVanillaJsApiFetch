@@ -7,7 +7,7 @@ export const fnCreateResource = () => {
             body: JSON.stringify({
               title: 'foo',
               body: 'bar',
-              userId: 1
+              userId: 2
             }),
             headers: {
               "Content-type": "application/json; charset=UTF-8"

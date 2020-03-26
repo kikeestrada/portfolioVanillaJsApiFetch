@@ -26,10 +26,6 @@ export const fnGetAllResources = () => {
 					<div class="card__content">
 						<p>${jsonpApi.body}</p>
 					</div>
-					<div class="card__sub-content">
-						<p>${jsonpApi.userId}</p>
-					</div>
-					<div class="card__date"><span>ID: ${jsonpApi.title}</span></div>
 				</article>
 			`;
 			container.insertAdjacentHTML('beforeend', articleHTML)
