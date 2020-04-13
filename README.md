@@ -1,4 +1,4 @@
-# API Fetch vanilla JS Excesice Consuming API Place Holder
+# API Fetch vanilla JS Excesice Consuming a fake API
 
 This is a Basic and Virtual Project developed by me where i am using fetch to consuming a fake api using a Gulp Boileplate developed be me
 
